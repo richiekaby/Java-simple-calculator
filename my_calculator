@@ -1,0 +1,35 @@
+/**
+ *
+ * @author Kamere
+ */
+import java.util.*;
+public class MyCalculator {
+static Double numbers=0.0;
+static Double sum = 0.0;
+
+public static Double calculate(){
+    Scanner num = new Scanner(System.in);
+    System.out.println("Enter the number to add");
+    
+    while(num.hasNext()){
+        if(num.hasNextDouble()){
+            sum += num.nextDouble();
+           // numbers++;
+              }else{
+            String text=num.next();
+            if(text.equals("answer")){
+                break;
+            }else{
+                System.out.print("Invalid character.");
+                break;}
+        } 
+    }
+    System.out.println("The sum of your numbers is: "+sum);
+        return sum;
+}
+public static void main(String[] args) {
+  calculate();  
+  System.out.println(calculate());  
+    }
+    }
+
